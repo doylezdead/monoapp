@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<!--
+  Ryan Doyle - rcdoyle@mtu.edu
+  QuickApp.framework
+  http://github.com/doylezdead/quickapp
+  v0.0.1
+-->
+
+<!--
+  <Author> - <email>
+  <App Name>
+  https://github.com/*
+  v0.0.1
+-->
+
+<html lang="en">
+  <!-- HEAD -->
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+  <style>
+    .container {
+      padding: 15px;
+      max-width: 600px;
+    }
+  </style>
+
+  <!-- TEMPLATES -->
+  <script id="example_template" type="text/x-handlebars-template">
+    <b>{{field}}</b>
+  </script>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/handlebarsjs/4.0.5/handlebars.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    var template = Handlebars.compile($("#example_template").html())
+    $(document).ready(function(){
+      $('#container').append(template({field: 'Hello'}));
+    });
+  </script>
+
+  <!-- MARKUP -->
+  <body style="background: url('https://subtlepatterns.com/patterns/ticks.png');"><center>
+    <div id="container" class="container">
+      <h2 style="text-align: center;">EXAMPLE APP</h2>
+    </div>
+  </center></body>
+</html>
